@@ -11,10 +11,10 @@ const NavBar = () => {
           <NavBarbootstrap.Toggle aria-controls="basic-navbar-nav" />
           <NavBarbootstrap.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="#link">Quienes somos</Nav.Link>
-              <Nav.Link href="#link">Contacto</Nav.Link>
-              <Nav.Link href="#link">Tienda</Nav.Link>
-              <Nav.Link href="#link"><CartWidget /></Nav.Link>
+              <Nav.Link to="/" href="#QuienesSomos">Quienes somos</Nav.Link>
+              <Nav.Link to="/" href="#Contacto">Categoria</Nav.Link>
+              <Nav.Link to="/color/verde" href="#Tienda">Termos</Nav.Link>
+              <Nav.Link href="#"><CartWidget /></Nav.Link>
             </Nav>
           </NavBarbootstrap.Collapse>
         </Container>

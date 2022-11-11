@@ -1,10 +1,11 @@
-import NavBar from './componentes/NavBar';
 import ItemListContainer from './componentes/ItemListContainer'
+import Router from './app/Router';
 
 const App = () => {
+
     return(
         <div className="box">
-            <NavBar />
+            <Router />
             <ItemListContainer gretting= {"Bienvenidos"}/>
 
         </div>
