@@ -1,0 +1,31 @@
+.logo {
+    text-decoration: none;
+    font-size: 1.7rem;
+    margin-left: 1rem;
+    color: aliceblue;
+}
+
+.nav-style{
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: aliceblue;
+    margin-left: 1rem;
+    margin-right: 1.8rem;
+    cursor: pointer;
+}
+
+.nav-style:hover{
+    color:yellow;
+}
+
+.logo-carrito{
+    margin-right: 1rem;
+    color: aliceblue;
+    padding-right: 3rem ;
+
+
+}
+
+.logo-carrito:hover{
+    color: yellow;
+}

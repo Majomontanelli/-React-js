@@ -1,0 +1,27 @@
+.contador{
+    background-color: rgb(99, 96, 94);
+    padding: 1.2rem;
+    border-radius: 10%;
+    border: 1px solid #121212;
+    margin: 2rem;
+    text-align: center;
+}
+
+.number-count{
+    padding: 0px 35px;
+    border: 1px solid #121212;
+    background-color: aliceblue;
+}
+
+.btn-add{
+    margin-top: 10px;
+    background-color: aliceblue;
+    cursor: pointer;
+    font-weight: bolder;
+    color: #121212;
+}
+
+.btn-add:hover{
+    background-color:#121212;
+    color:aliceblue
+}

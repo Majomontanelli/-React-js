@@ -1,12 +1,13 @@
 import React from "react";
 
-const Item = ({producto}) => {
-    const {id, nombre, descripcion, precio, img, color} = producto
+export const Item = ({info}) => {
+
     return(
-        <div>
-            <img src={producto.img} alt="Termo" />
-            <p key={producto.id}>{producto.descripcion},{producto.color},{producto.precio}</p>
-        </div>
+        <a href="" className="card">
+            <p>funcionaaaaa???</p>
+            <img src={info.img} alt="termo" />
+
+        </a>
     )
 }
 

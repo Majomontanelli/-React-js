@@ -1,24 +1,33 @@
-import React, { useState } from "react";
-import "./ItemListContainer.css";
+import React, { useEffect, useState }from "react";
+import ItemCount from "./ItemCount";
+import { productos } from "../app/Arrays";
 import ItemList from "./ItemList";
-import { data } from "../app/Arrays";
+import "../assets/styles/ItemListContainer.css";
+ 
+
+export const ItemListContainer=({greeting})=> {
+    const [prod, setProd] = useState ([])
+
+    useEffect(() => {
+        const getProd= new Promise (resolve => {
+            setTimeout(() =>{
+                resolve(productos) 
+            }, 1000)
+        })
+        getProd.then(res => setProd(res))
+    }, [])
 
 
-const ItemListContainer=({gretting})=> {
-    const [loading, setLoading] = useState([]);
-    const [ListaTermos, setListaTermos] = useState([]);
-
-    useEffect ( () => {
-        data
-        .then((res)=> setListaTermos(res.filter(item => item.color === "Verde") ))
-        .catch((error) => console.log (error))
-        .finally(() => setLoading(false))
-    } , []);    
+    const onAdd = (contador) => {
+        console.log(`Compraste ${contador} unidades`)
+    }
     return(
         <div className="ItemContainer">
-            <h1>{gretting}</h1>
-            <button className="btn-acceder">Acceder</button>
+            <h1>{greeting}</h1>
+        <ItemCount inicio={1} stock={5} onAdd={onAdd}/>
+        <ItemList prod={prod} />
         </div>
+    
     )
 }
 

@@ -1,24 +1,37 @@
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import {default as NavBarbootstrap} from 'react-bootstrap/NavBar';
+import React from 'react';
+import { Link } from 'react-router-dom'
 import CartWidget from './CartWidget';
+import '../assets/styles/Navbar.css';
 
 const NavBar = () => {
     return (
-        <NavBarbootstrap bg="dark" variant="dark">
-        <Container>
-          <NavBarbootstrap.Brand href="#home">TERMOLAND⚡</NavBarbootstrap.Brand>
-          <NavBarbootstrap.Toggle aria-controls="basic-navbar-nav" />
-          <NavBarbootstrap.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto">
-              <Nav.Link to="/" href="#QuienesSomos">Quienes somos</Nav.Link>
-              <Nav.Link to="/" href="#Contacto">Categoria</Nav.Link>
-              <Nav.Link to="/color/verde" href="#Tienda">Termos</Nav.Link>
-              <Nav.Link href="#"><CartWidget /></Nav.Link>
-            </Nav>
-          </NavBarbootstrap.Collapse>
-        </Container>
-      </NavBarbootstrap>
+
+<div>
+  <nav className='navbar navbar-expand-lg navbar-dark bg-dark pb-3 pt-3'>
+    <div className='container-fluid'>
+      <Link className='logo' to= "/">
+        TERMOLAND⚡
+      </Link>
+      <button className='navbar-toggler' type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="basic-navbar-nav">
+           <span className='navbar-toggler-icon'></span>
+      </button>
+      <div className='collapse navbar-collapse' id='navbarNav'>
+        <ul className='navbar-nav ms-auto'>
+          <li>
+          <Link className="nav-style" to="/">Tienda</Link>
+          </li>
+          <li className='centrar'>
+          <Link className="nav-style" to="/category/:categoryColor">Termos verdes</Link>
+          </li>
+          <li>
+          <Link className='logo-carrito' to="/cart"><CartWidget /></Link>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+
   );
  
 }

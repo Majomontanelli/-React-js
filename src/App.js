@@ -1,13 +1,21 @@
-import ItemListContainer from './componentes/ItemListContainer'
-import Router from './app/Router';
+//import { Navbar } from 'react-bootstrap';
+import NavBar from "./componentes/NavBar";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import ItemListContainer from './componentes/ItemListContainer';
+import Cart from './pages/Cart';
 
 const App = () => {
 
     return(
         <div className="box">
-            <Router />
-            <ItemListContainer gretting= {"Bienvenidos"}/>
-
+            <BrowserRouter>
+                <NavBar />
+                <Routes>
+                    <Route path="/" element={ <ItemListContainer greeting= {"Bienvenidos, no me funciona el array"}/>} />
+                    <Route path="/category" element={<ItemListContainer />} />
+                    <Route path="/cart" element={<Cart />} />
+                </Routes>  
+            </BrowserRouter>
         </div>
     )
 }
