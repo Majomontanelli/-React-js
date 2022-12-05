@@ -1,0 +1,33 @@
+.container{
+    margin: auto;
+    width: 75%;
+}
+
+@media screen and (min-width: 768px) {
+    .container{
+        width: 60%;
+    } 
+}
+.detail{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.detail-img{
+    width: 85%;
+    height: 50%;
+}
+.content{
+    width: 100%;
+}
+@media screen and (min-width: 768px) {
+    .detail-img{
+        width:50%;
+    }    
+    .content{
+        padding-left: 3rem;
+        width: 50%;
+    }
+}

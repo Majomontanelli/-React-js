@@ -5,7 +5,6 @@ import '../assets/styles/Navbar.css';
 
 const NavBar = () => {
     return (
-
 <div>
   <nav className='navbar navbar-expand-lg navbar-dark bg-dark pb-3 pt-3'>
     <div className='container-fluid'>
@@ -21,7 +20,10 @@ const NavBar = () => {
           <Link className="nav-style" to="/">Tienda</Link>
           </li>
           <li className='centrar'>
-          <Link className="nav-style" to="/category/:categoryColor">Termos verdes</Link>
+          <Link className="nav-style" to="/category/Acero">Acero Inox</Link>
+          </li>
+          <li className='centrar'>
+          <Link className="nav-style" to="/category/Vidrio">Vidrio</Link>
           </li>
           <li>
           <Link className='logo-carrito' to="/cart"><CartWidget /></Link>
