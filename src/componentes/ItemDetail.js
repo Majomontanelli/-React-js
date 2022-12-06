@@ -20,7 +20,7 @@ export const ItemDetail = ({prod}) => {
                 <div className="content">
                     <h1>{prod.nombre}</h1>
                     {
-                        goToCart ? <Link to='/cart'>Finalizar compra</Link> : <ItemCount inicio={1} stock={5} onAdd={onAdd}/>
+                        goToCart ? <Link to='/cart'>Ir al carrito</Link> : <ItemCount inicio={1} stock={10} onAdd={onAdd}/>
                     }
                 </div>
             </div>

@@ -1,0 +1,7 @@
+.cart-container{
+    width: 50%;
+    height: auto;
+    justify-content: center;
+    background-color: rgba(231, 231, 97, 0.493);
+    align-items: center;
+}
