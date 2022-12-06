@@ -1,6 +1,6 @@
 import React, {useState, useContext } from "react";
 
-const CartContext = React.createContext([]);
+export const CartContext = React.createContext([]);
 
 export const useCartContext= () => useContext(CartContext);
 
@@ -9,7 +9,7 @@ const CartProvider = ({ children }) => {
     const [carrito, setCarrito] = useState([]);
 
     const addProd = (item, newQuantity) => {
-        const newCarrito = carrito.filter(product => product.id !== item.id);
+        const newCarrito = carrito.filter(prod => prod.id !== item.id);
         newCarrito.push ({...item, contador: newQuantity});
         setCarrito(newCarrito)
     }
@@ -40,7 +40,7 @@ const CartProvider = ({ children }) => {
             addProd,
             totalPrice,
             totalProd, 
-            carrito
+            carrito,
         }}>
             {children}
         </CartContext.Provider>
