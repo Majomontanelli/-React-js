@@ -18,7 +18,6 @@ const CartProvider = ({ children }) => {
         }
      }
 
-
    // función para totales
     const totalPrice= () => {
         return carrito.reduce((prev, act) => prev + act.contador * act.precio, 0);

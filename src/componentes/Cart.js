@@ -44,8 +44,8 @@ const Cart = () => {
            </div>
            <p className="total-tam">Total: ${totalPrice()}</p>
             <div>
-                <button onClick={handClick}>Confirmar compra</button>
-                <button>Continuar comprando</button>
+                <button className="bg-success" onClick={handClick}>Confirmar compra</button>
+                <button className="m-3 bg-dark"><Link to='/'>Continuar comprando</Link></button>
             </div>
         </div>
     )
