@@ -1,7 +1,49 @@
-.cart-container{
+.carrito-container{
     width: 50%;
     height: auto;
+    display: flex;
     justify-content: center;
+    flex-direction: column;
     background-color: rgba(231, 231, 97, 0.493);
     align-items: center;
+    margin: 2rem 4rem;
+    padding: 1rem;
+}
+
+.cart-vacio{
+    font-size: 3rem;
+    background-color: rgba(231, 231, 97, 0.493);
+    color: rgb(48, 45, 45);
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 4rem;
+    padding: 8rem;
+}
+
+.total-tam{
+    font-size: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+    .cart-vacio{
+    margin: 1rem 3rem;
+    padding: 4rem;
+    font-size: 2rem;
+    }
+    
+}
+
+.cart-vacio button{
+    background-color: rgb(82, 80, 80);
+    color:aliceblue;
+    width: 260px;
+    height: 60px;
+    margin-top: 40px;
+}
+
+.cart-vacio button a{
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

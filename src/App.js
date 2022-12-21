@@ -15,7 +15,7 @@ const App = () => {
                 <CartProvider>
                 <NavBar />
                 <Routes>
-                    <Route path="/" element={ <ItemListContainer greeting= {"Tienda Termoland"}/>} />
+                    <Route path="/" element={ <ItemListContainer greeting= {"Termoland - Tienda online Argentina - Envíos a todo el país"}/>} />
                     <Route path="/category/:categoryId" element={<ItemListContainer />} />
                     <Route path="/cart" element={<Cart />} />
                     <Route path="/detalle/:detalleId" element={<ItemDetailContainer />} />

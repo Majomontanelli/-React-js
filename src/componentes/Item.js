@@ -5,7 +5,7 @@ export const Item = ({info}) => {
 
     return(
             <Link to={`/detalle/${info.id}`} className="card">
-                <img src={info.img} alt="termo" />
+                <img className="imgcard container-fluid text-center" src={info.img} alt="termo" />
                 <h2 className="name-card">{info.nombre}</h2>
                 <p className="desc-card">{info.descripción}</p>
                 <p className="price-card">${info.precio}</p>

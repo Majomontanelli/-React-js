@@ -1,3 +1,4 @@
+
 .container{
     margin: auto;
     width: 75%;
@@ -5,29 +6,48 @@
 
 @media screen and (min-width: 768px) {
     .container{
-        width: 60%;
+        width: 100%;
     } 
 }
 .detail{
     margin-top: 3rem;
     margin-bottom: 3rem;
-    width: 100%;
+    width: 50%;
     display: flex;
-    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
 }
 .detail-img{
-    width: 85%;
-    height: 50%;
+    width: 170px;
+    height: auto;
 }
 .content{
     width: 100%;
 }
 @media screen and (min-width: 768px) {
     .detail-img{
-        width:50%;
+        width:40%;
     }    
     .content{
-        padding-left: 3rem;
-        width: 50%;
+        padding-left: 2rem;
+        width: 80%;
     }
 }
+
+.btn-cart{
+    background-color: rgb(73, 73, 75);
+    font-size: larger;
+    padding: 7px 25px;
+}
+
+.btn-cart:hover{
+    background-color: rgb(197, 176, 56);
+}
+
+a{
+    text-decoration: none !important;
+    color: aliceblue !important;
+}
+
+
+

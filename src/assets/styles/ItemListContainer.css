@@ -1,18 +1,17 @@
 .ItemContainer{
     background-color: rgba(208, 221, 159, 0.938);
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
-    align-items: center;
     height: auto;
     width: 100%;
+    padding-bottom: 40px;
+    padding-right: 3rem;
+    padding-left: 3rem;
 
 }
-.btn-acceder{
-    background-color: #121212;
-    color: aliceblue;
-    border-radius: 80px;
-    padding: 7px 14px;
-    font-size: 18px;
 
+.greeting{
+    color:rgba(47, 55, 78, 0.938);
+    padding-top: 20px;
 }

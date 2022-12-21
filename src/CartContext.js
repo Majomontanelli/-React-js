@@ -8,13 +8,16 @@ const CartProvider = ({ children }) => {
     //almaceno carrito
     const [carrito, setCarrito] = useState([]);
 
-    const addProd = (item, newQuantity) => {
-        const newCarrito = carrito.filter(prod => prod.id !== item.id);
-        newCarrito.push ({...item, contador: newQuantity});
-        setCarrito(newCarrito)
-    }
+    const addProd = (item, contador) => {
+        if (enCarrito(item.id)) {
+            setCarrito(carrito.map(product => {
+                return product.id === item.id ? {...product, contador: product.contador + contador} : product
+            }));
+        }else{
+            setCarrito([...carrito, {...item, contador }]);
+        }
+     }
 
-    console.log("carrito:", carrito)
 
    // función para totales
     const totalPrice= () => {

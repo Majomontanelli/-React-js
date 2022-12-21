@@ -1,29 +1,30 @@
 
 .card{
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     width: 200px;
     margin-right: 10px;
     margin-left: 10px;
     margin-top: 30px;
     text-align: center;
-    font-family: arial;
+    text-decoration: none;
+}
+
+
+.imgcard{
+    height: 300px;
+    width: 100px;
 }
 
 .name-card{
     color: #121212;
     cursor: pointer;
-    text-decoration: none;
 }
 
 .desc-card{
     color: #121212;
-    text-decoration: none;
 }
 
 .price-card{
     color:#121212;
-    text-decoration: none;
 }
