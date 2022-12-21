@@ -3,12 +3,14 @@ import { getFirestore, addDoc, collection} from 'firebase/firestore';
 import { Link } from 'react-router-dom';
 import { useCartContext } from "../CartContext";
 import "../assets/styles/Cart.css";
+import swal from "sweetalert";
 import ItemCart from "./ItemCart";
 
 
 const Cart = () => {
     const { carrito, totalPrice } = useCartContext();
 
+    //lo que se ve en console.log y en firestore
     const ordenCompra= {
         dato: {
             nombre: "Lionel",
@@ -25,7 +27,17 @@ const Cart = () => {
         const db= getFirestore();
         const ordenCollection= collection(db, 'ordenes');
         addDoc(ordenCollection, ordenCompra)
-       .then(({ id }) => console.log(id))
+       .then(({ id }) => {
+        console.log(id)
+
+        //otra opcion para la vinculación con email y factura
+        swal("Escribe tu email aquí", {
+            content: "input",
+          })
+          .then((value) => {
+            swal(`Tu factura fue enviada a: ${value}`);
+          });
+        })
     }
 
     if(carrito.length === 0) {
